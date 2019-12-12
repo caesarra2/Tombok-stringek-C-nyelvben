@@ -80,7 +80,7 @@ Tehát 'a' egy karakter, viszont "a" egy string mely az alábbi két karaktert t
 
  ### **String kiírása "*%s*" printf paraméterrel.**
 
-A *%s* jelölés azt jelenti a *printf* függvénynél, hogy a kapott paramétert stringként kezelje, tehát addig írja ki a karaktereket amíg el nem ér a stringet lezáró null karakterig.
+A **%s** jelölés azt jelenti a **printf** függvénynél, hogy egy megkapott memóriacímtől kezdve addig írjon ki karaktereket amíg el nem ér egy stringet lezáró null karakterig.
 
 ```C
 char str1[11] = { 'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd' }; // Nem String, mivel NEM null karakterrel végződik.
