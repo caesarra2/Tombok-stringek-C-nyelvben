@@ -93,7 +93,10 @@ printf("%s", str2); // VALID! Egy string, az output: "hello world".
 printf("%s", str3); // VALID! Szintén egy string, az output: "hello world".
 ```
 **Fontos:** Ahogy említettem, addig próbál meg a *printf* az *%s* paraméterrel karaktereket kiírni amíg el nem ér egy null karakterig. str1-ben viszont nem szerepel null karakter, ezért a *printf* nem fog megállni a kiírással a karakterlánc végén, hanem elkezd tovább haladni a memóriában és printelni mindent amíg el nem ér egy kósza null karakterig. Az output ilyen esetben hasonlóan nézne ki: hello world╠╠╠╠╠îäş-. 
+
 Ez természetesen nem egészséges, tehát mindig ügyeljünk arra, hogy a megfelelő paraméterekkel lássunk el egy függvényt.
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 A string.h függvénykönyvtár tartalmaz számos string kezelő függvényt, melyek megkönnyítik a munkánkat ha stringekkel dolgozunk.
 A függvények listája, valamint dokumentációja melyeket használhatunk ha includeoltuk a string.h-t megtalálható az alábbi linken: https://en.cppreference.com/w/c/string/byte
