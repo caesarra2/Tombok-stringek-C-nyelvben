@@ -14,7 +14,7 @@ int salt[6]; // Salt az egy tömb mely 6 elemből áll, és az elemei integer t�
 ```
 A tömb egyes elemeire tekinthetünk változókként, melyekhez hozzáférhetünk külön-külön, a következő képpen: **tömb_név[*index*];**
 ```C
-salt[0] = 8; // Salt nevű tömb első elemének az értéke 8-ra állítása. (A tömbök elemeinek számozása nullától kezdődik.)
+salt[0] = 8; // Salt nevű tömb első elemének az értékének 8-ra állítása. (A tömbök elemeinek számozása nullától kezdődik.)
 salt[3] = -2; // Salt nevű tömb negyedik elemének az értéke -2-re állítása.
 salt[8] = 5; // INVALID, túlléptünk a tömbünk méretén. Mindig ügyeljünk arra, hogy az adott tömb eleme amihez éppen hozzá szeretnénk férni a kereteinken belül legyen!
 ```
