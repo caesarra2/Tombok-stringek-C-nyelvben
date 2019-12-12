@@ -12,13 +12,13 @@ Szintaxis, valamint példa egy tömb létrehozására:
 ```C
 int salt[6]; // Salt az egy tömb mely 6 elemből áll, és az elemei integer típúst tudnak tárolni.
 ```
-A tömb egyes elemeire tekinthetünk változókként, melyekhez hozzáférhetünk külön-külön, a következő képpen: tömb_név[melyik_elem];
+A tömb egyes elemeire tekinthetünk változókként, melyekhez hozzáférhetünk külön-külön, a következő képpen: **tömb_név[*index*];**
 ```C
 salt[0] = 8; // Salt nevű tömb első elemének az értéke 8-ra állítása. (A tömbök elemeinek számozása nullától kezdődik.)
 salt[3] = -2; // Salt nevű tömb negyedik elemének az értéke -2-re állítása.
 salt[8] = 5; // INVALID, túlléptünk a tömbünk méretén. Mindig ügyeljünk arra, hogy az adott tömb eleme amihez éppen hozzá szeretnénk férni a kereteinken belül legyen!
 ```
-Fontos: A "tömb_méret", kifejezés olyan konstans érték lehet, melyet már ismerünk a programunk compileolásakor, tehát a "tömb_méret" nem lehet egy olyan változó, amely a program futása közben kap értéket; 
+Fontos: A **"tömb_méret"**, kifejezés olyan konstans érték lehet, melyet már ismerünk a programunk compileolásakor, tehát a **"tömb_méret"** nem lehet egy olyan változó, amely a program futása közben kap értéket; 
 ```C
 int first;
 const int second = 8;
