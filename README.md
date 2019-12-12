@@ -116,7 +116,7 @@ Ha valakinek a teljes nevét(Ami állhat több szóból is) szeretnénk beolvasn
 
 	printf("Hello %s. A neved %d karakterből áll.", name, length); 
 ```
-**Megjegyzés:** Ha az inputunk "hello world" volt, akkor az output a következő lesz: "Hello hello world. A neved 11 karakterből áll".
+**Megjegyzés:** Ha az inputunk "hello world" volt, akkor az output a következő lesz: *"Hello hello world. A neved 11 karakterből áll".*
 A *strlen()* függvény visszatérési értéke az egy általunk megadott stringben szereplő karakterek száma, nem számítva a string végi null karaktert.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
