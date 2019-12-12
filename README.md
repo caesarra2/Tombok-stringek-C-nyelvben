@@ -85,12 +85,14 @@ A **%s** jelölés azt jelenti a **printf** függvénynél, hogy egy megkapott m
 ```C
 char str1[11] = { 'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd' }; // Nem String, mivel NEM null karakterrel végződik.
 char str2[12] = { 'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '\0' }; // String, mivel null karakterrel végződik.
-char str3[12] = "hello world"; // String, mivel ebben a deklarálási esetben automatikusan megkapta a végére a null karaktert.
+char str3[12] = {'h','e', 'l', 'l', '\0', ' ', 'w', 'o', 'r', 'l', 'd','\0', }; // Szintén string.
+char str4[12] = "hello world"; // String, mivel ebben a deklarálási esetben automatikusan megkapta a végére a null karaktert.
 
 
 printf("%s", str1); // ILYET NE! Ami nem string azt ne próbáljuk meg %s paraméterrel kiiratni!
 printf("%s", str2); // VALID! Egy string, az output: "hello world".
-printf("%s", str3); // VALID! Szintén egy string, az output: "hello world".
+printf("%s", str3); // VALID! Ez is egy string, viszont az output:"hell". Ahogy említettem, addig ír ki karaktereket amíg el nem ér egy null karakterig.
+printf("%s", str4); // VALID! Szintén egy string, az output: "hello world".
 ```
 **Fontos:** Ahogy említettem, addig próbál meg a *printf* az *%s* paraméterrel karaktereket kiírni amíg el nem ér egy null karakterig. str1-ben viszont nem szerepel null karakter, ezért a *printf* nem fog megállni a kiírással a karakterlánc végén, hanem elkezd tovább haladni a memóriában és printelni mindent amíg el nem ér egy kósza null karakterig. Az output ilyen esetben hasonlóan nézne ki: hello world╠╠╠╠╠îäş-. 
 
