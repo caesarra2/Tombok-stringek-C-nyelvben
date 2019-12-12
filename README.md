@@ -66,7 +66,8 @@ char arr[8] = "hello";
 ```
 Ilyenkor a maradék helyeken null karakter lesz.(Jelen esetben a tömb így nézne ki: 'h', 'e', 'l', 'l', 'o', '\0', '\0', '\0' )
 
-Szintén fontos megjegyezni, hogy a " (idézőjel) valamint ' (aposztróf) jelentése nem azonos.
+Szintén fontos megjegyezni, hogy a " (idézőjel) valamint ' (aposztróf) jelentése nem azonos. Aposztrófot egyedül álló karakterek jelölésénél használunk, idézőjeleket pedig akkor, amikor stringet jelölünk.
+
 Nézzünk meg egy példát:
 ```C
 char first = 'a'; // Valid
