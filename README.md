@@ -71,7 +71,7 @@ Szintén fontos megjegyezni, hogy a " (idézőjel) valamint ' (aposztróf) jelen
 Nézzünk meg egy példát:
 ```C
 char first = 'a'; // Valid
-char second = "a" // Error! Ebben az esetben az a betűt stringként kezeljük, ezért hozzáadódik a null karakter is automatikusan, tehát 2 karaktert próbálunk meg egy változóhoz rendelni.
+char second = "a" // Error! Ebben az esetben az a betűt az idézőjelek miatt stringként jelöljük, ezért hozzáadódik a null karakter is automatikusan, tehát 2 karaktert próbálunk meg egy változóhoz rendelni.
 ```
 Tehát 'a' egy karakter, viszont "a" egy string mely az alábbi két karaktert tartalmazza: 'a', '\0'.
 
