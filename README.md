@@ -59,7 +59,7 @@ String deklaráláskor a méret elhagyható, ilyenkor a méret automatikusan meg
 char negyedik[] = "hello world"; // Valid
 char otodik[]; // Error! Ismeretlen mértű tömböt próbálunk meg létrehozni.
 ```
-Mi történik, ha a char tömbünk nagyobb, mint ahány karakternyi stringet rendelünk hozzá?
+Mi történik, ha a *char* tömbünk nagyobb, mint ahány karakternyi stringet rendelünk hozzá?
 Példa:
 ```C
 char tomb[8] = "hello";
