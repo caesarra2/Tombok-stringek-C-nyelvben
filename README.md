@@ -1,5 +1,6 @@
-# Tömbök, stringek - Rövid ismétlés
+## Tömbök, stringek - Rövid ismétlés
 
+#Tömbök
 Egy tömb létrehozásakor az alábbi információkat kell biztosítanunk:
 - Milyen típusú értékeket szeretnénk tárolni (pl: double, char, etc.)
 - A tömb neve.
@@ -39,6 +40,7 @@ free(arr);
 // Miután már nincs szükségünk a lefoglalt memóriára, a free() függvénnyel visszaadhatjuk a memória pool-ba, tehát az adott memória tartomány újra felhasználható lesz. 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------
+#String
 Amikor létrehozunk egy tömböt, akkor annak az elemei a memóriában egymás mellett foglalnak helyet; valamint tudjuk, hogy egy string az egy adott számú karakter, egymást követő bájtokban tárolva a memóriában. Ebből kikövetkeztethetjük, hogy egy char típusú tömb alkalmas string tárolására.
 
 Szabály: C nyelvben minden string utolsó karaktere egy null karakter( '\0' ); Ez jelöli a string végét.
