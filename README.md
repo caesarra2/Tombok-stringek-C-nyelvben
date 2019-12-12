@@ -7,7 +7,7 @@ Egy tömb létrehozásakor az alábbi információkat kell biztosítanunk:
 
 Szintaxis, valamint példa egy tömb létrehozására:
 
-típús tömb_neve[tömb_méret];
+**típús tömb_neve[tömb_méret];**
 ```C
 int salt[6]; // Salt az egy tömb mely 6 elemből áll, és az elemei integer típúst tudnak tárolni.
 ```
