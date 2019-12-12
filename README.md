@@ -47,22 +47,22 @@ Amikor létrehozunk egy tömböt, akkor annak az elemei a memóriában egymás m
 
 Nézzünk meg kettő példát:
 ```C
-char elso[5] = {'h','e','l','l','o'}; // Nem string, mivel nem '\0'-re végződik a karakterláncunk.
-char masodik[6] = {'h','e','l','l','o', '\0'}; // Ez viszont már string!
+char arr1[5] = {'h','e','l','l','o'}; // Nem string, mivel nem '\0'-re végződik a karakterláncunk.
+char arr2[6] = {'h','e','l','l','o', '\0'}; // Ez viszont már string!
 ```
 Egy stringek a karaktereit nem muszáj egyesével, aposztróffal elválasztva megadni, használhatunk " jeleket is, ebben az esetben a '\0' automatikusan a karakterlánc végére kerül.
 ```C
-char harmadik[12] = "hello world"; // Ez egy string!
+char arr3[12] = "hello world"; // Ez egy string!
 ```
 String deklaráláskor a méret elhagyható, ilyenkor a méret automatikusan megadódik. Ez az eset viszont csak akkor használható, ha egyből rendelünk is stringet a tömbhöz.
 ```C
-char negyedik[] = "hello world"; // Valid
-char otodik[]; // Error! Ismeretlen mértű tömböt próbálunk meg létrehozni.
+char arr4[] = "hello world"; // Valid
+char arr5[]; // Error! Ismeretlen mértű tömböt próbálunk meg létrehozni.
 ```
 Mi történik, ha a *char* tömbünk nagyobb, mint ahány karakternyi stringet rendelünk hozzá?
 Példa:
 ```C
-char tomb[8] = "hello";
+char arr[8] = "hello";
 ```
 Ilyenkor a maradék helyeken null karakter lesz.(Jelen esetben a tömb így nézne ki: 'h', 'e', 'l', 'l', 'o', '\0', '\0', '\0' )
 
