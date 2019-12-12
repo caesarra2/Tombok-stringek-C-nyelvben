@@ -7,7 +7,7 @@ Egy tömb létrehozásakor az alábbi információkat kell biztosítanunk:
 
 Szintaxis, valamint példa egy tömb létrehozására:
 
-**típús tömb_neve[tömb_méret];**
+**_típús_ tömb_neve[tömb_méret];**
 ```C
 int salt[6]; // Salt az egy tömb mely 6 elemből áll, és az elemei integer típúst tudnak tárolni.
 ```
@@ -33,11 +33,10 @@ int amount;
 scanf("%d", &amount);
 
 double* arr = (double*)malloc(amount * sizeof(double)); // Valid, a felhasználó által megadott számú, double méretű memóriát foglalunk le.	
-					    // Erre a tartományra tekinthetünk hasonló képpen mintha egy tömb lenne.
+					    		// Erre a lefoglalt tartományra tekinthetünk hasonló képpen mintha egy tömb lenne.
 			
 free(arr);
-// Miután már nincs szükségünk a lefoglalt memóriára, a free() függvénnyel visszaadhatjuk a memória pool-ba, tehát az adott memória 
-// tartomány újra felhasználható lesz. 
+// Miután már nincs szükségünk a lefoglalt memóriára, a free() függvénnyel visszaadhatjuk a memória pool-ba, tehát az adott memória tartomány újra felhasználható lesz. 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------
 Amikor létrehozunk egy tömböt, akkor annak az elemei a memóriában egymás mellett foglalnak helyet; valamint tudjuk, hogy egy string az egy adott számú karakter, egymást követő bájtokban tárolva a memóriában. Ebből kikövetkeztethetjük, hogy egy char típusú tömb alkalmas string tárolására.
