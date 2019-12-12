@@ -98,7 +98,29 @@ Ez természetesen nem egészséges, tehát mindig ügyeljünk arra, hogy a megfe
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-A string.h függvénykönyvtár tartalmaz számos string kezelő függvényt, melyek megkönnyítik a munkánkat ha stringekkel dolgozunk.
-A függvények listája, valamint dokumentációja melyeket használhatunk ha includeoltuk a string.h-t megtalálható az alábbi linken: https://en.cppreference.com/w/c/string/byte
+**Egy teljes sor beolvasása a felhasználótól, majd műveletek a stringgel.**
+
+Adott az alábbi tömb.
+```C
+char name[50];
+```
+Ha valakinek a teljes nevét szeretnénk beolvasni a *name* tömbbe, ami több szóból áll, akkor azt megtehetjük egy általunk írt ciklussal; karakterenként belemásolgatni az inputot a tömbünkbe, ellenőrizni a méretet, stb, stb. Vagy használhatjuk a **gets_s** függvényt, mely paraméterként kér egy célt, hogy hova olvassa be a karaktereket, valamint egy maximum méretet, ami után már nem olvas be többet. (Ez a függvény addig olvas be a karaktereket amíg el nem jut a "newline" karakterig. (ami automatikusan szerepel az inputban a sor végén amikor entert nyomunk.))
+
+```C
+	char name[50]; // Tömb létrehozása, mely képes 50 char tárolására.
+
+	printf("Kérjük írja be a teljes nevét:");
+	gets_s(name, sizeof(name)); // Megadjuk a célt, valamint a maximum méretet. A "sizeof(name)" visstatérési értéke a name tömbünk mérete bájtokban.
+
+	int length = strlen(name); // A length nevű változóba másoljuk a felhasználó által beírt stringben szereplő karakterek számát.
+
+	printf("Hello %s. A neved %d karakterből áll", name, length); 
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+
+*A string.h függvénykönyvtár tartalmaz számos string kezelő függvényt, melyek megkönnyítik a munkánkat ha stringekkel dolgozunk.
+A függvények teljes listája, valamint dokumentációja melyeket használhatunk ha includeoltuk a string.h-t megtalálható az alábbi linken:* https://en.cppreference.com/w/c/string/byte
 
 
