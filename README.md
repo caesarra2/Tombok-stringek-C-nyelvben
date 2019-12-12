@@ -95,7 +95,7 @@ printf("%s", str2); // VALID! Egy string, az output: "hello world".
 printf("%s", str3); // VALID! Ez is egy string, viszont az output:"hell". Ahogy említettem, addig ír ki karaktereket amíg el nem ér egy null karakterig.
 printf("%s", str4); // VALID! Szintén egy string, az output: "hello world".
 ```
-**Fontos:** Addig próbál meg a *printf* az *%s* paraméterrel karaktereket kiírni amíg el nem ér egy null karakterig. str1-ben viszont nem szerepel null karakter, ezért a *printf* nem fog megállni a kiírással a karakterlánc végén, hanem elkezd tovább haladni a memóriában és printelni mindent amíg el nem ér egy kósza null karakterig. Az output ilyen esetben hasonlóan nézne ki: hello world╠╠╠╠╠îäş-. 
+**Fontos:** Egy adott címtől addig próbál meg a *printf* az *%s* paraméterrel karaktereket kiírni amíg el nem ér egy '\0'-ig! str1-ben viszont nem szerepel null karakter, tehát a *printf* nem fog megállni a kiírással a karakterláncunk végén. Ilyen esetekben csak szimplán halad tovább a memóriában és printel mindent amivel éppen találkozik mindaddig amíg nem botlik valahol egy kósza null karakterbe. A programunk viselkedése ilyen esetekben ismeretlen, az output valami hasonlóan nézne ki.: hello world╠╠╠╠╠îäş-. 
 
 Ez természetesen nem egészséges, tehát mindig ügyeljünk arra, hogy a megfelelő paraméterekkel lássunk el egy függvényt.
 
