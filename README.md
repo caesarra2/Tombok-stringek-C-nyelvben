@@ -47,7 +47,7 @@ Tudjuk azt, hogy amikor létrehozunk egy tömböt, akkor annak az elemei a memó
 
 Nézzünk meg kettő példát:
 ```C
-char arr1[5] = {'h','e','l','l','o'}; // Nem string, mivel nem '\0'-re végződik a karakterláncunk.
+char arr1[5] = {'h','e','l','l','o'}; // Nem string, csak szimplán karakterek egy tömbben, mivel nem '\0'-re végződik a karakterláncunk.
 char arr2[6] = {'h','e','l','l','o', '\0'}; // Ez viszont már string!
 ```
 Egy stringek a karaktereit nem muszáj egyesével, aposztróffal elválasztva megadni, használhatunk " jeleket is, ebben az esetben a '\0' automatikusan a karakterlánc végére kerül.
