@@ -78,7 +78,7 @@ Tehát 'a' egy karakter, viszont "a" egy string mely az alábbi két karaktert t
 
 # Néhány egyszerű példa kód stringekkel, string kezelő függvényekkel.
 
- > **String kiírása "*%s*" printf paraméterrel.**
+ ### **String kiírása "*%s*" printf paraméterrel.**
 
 A *%s* jelölés azt jelenti a *printf* függvénynél, hogy a kapott paramétert stringként kezelje, tehát addig írja ki a karaktereket amíg el nem ér a stringet lezáró null karakterig.
 
@@ -98,7 +98,7 @@ Ez természetesen nem egészséges, tehát mindig ügyeljünk arra, hogy a megfe
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-> **Egy teljes sor beolvasása a felhasználótól, majd műveletek a stringgel.**
+### **Egy teljes sor beolvasása a felhasználótól, majd műveletek a stringgel.**
 
 Adott az alábbi tömb.
 ```C
