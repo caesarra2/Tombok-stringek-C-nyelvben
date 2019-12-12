@@ -78,7 +78,7 @@ Tehát 'a' egy karakter, viszont "a" egy string mely az alábbi két karaktert t
 
 # Néhány egyszerű példa kód stringekkel, string kezelő függvényekkel.
 
-**String kiírása "*%s*" printf paraméterrel.**
+ > **String kiírása "*%s*" printf paraméterrel.**
 
 A *%s* jelölés azt jelenti a *printf* függvénynél, hogy a kapott paramétert stringként kezelje, tehát addig írja ki a karaktereket amíg el nem ér a stringet lezáró null karakterig.
 
@@ -98,13 +98,13 @@ Ez természetesen nem egészséges, tehát mindig ügyeljünk arra, hogy a megfe
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-**Egy teljes sor beolvasása a felhasználótól, majd műveletek a stringgel.**
+> **Egy teljes sor beolvasása a felhasználótól, majd műveletek a stringgel.**
 
 Adott az alábbi tömb.
 ```C
 char name[50];
 ```
-Ha valakinek a teljes nevét szeretnénk beolvasni a *name* tömbbe, ami több szóból áll, akkor azt megtehetjük egy általunk írt ciklussal; karakterenként belemásolgatni az inputot a tömbünkbe, ellenőrizni a méretet, stb, stb. Vagy használhatjuk a **gets_s** függvényt, mely paraméterként kér egy célt, hogy hova olvassa be a karaktereket, valamint egy maximum méretet, ami után már nem olvas be többet. (Ez a függvény addig olvas be a karaktereket amíg el nem jut a "newline" karakterig. (ami automatikusan szerepel az inputban a sor végén amikor entert nyomunk.))
+Ha valakinek a teljes nevét(Ami állhat több szóból is) szeretnénk beolvasni a *name* tömbbe, akkor azt megtehetjük egy általunk írt ciklussal; karakterenként belemásolgatni az inputot a tömbünkbe, ellenőrizni a méretet, stb, stb. Vagy használhatjuk a **gets_s** függvényt, mely paraméterként kér egy célt, hogy hova olvassa be a karaktereket, valamint egy maximum méretet, ami után már nem olvas be többet. (Ez a függvény addig olvas be a karaktereket amíg el nem jut a "newline" karakterig. (ami automatikusan szerepel az inputban a sor végén amikor entert nyomunk.))
 
 ```C
 	char name[50]; // Tömb létrehozása, mely képes 50 char tárolására.
@@ -114,10 +114,11 @@ Ha valakinek a teljes nevét szeretnénk beolvasni a *name* tömbbe, ami több s
 
 	int length = strlen(name); // A length nevű változóba másoljuk a felhasználó által beírt stringben szereplő karakterek számát.
 
-	printf("Hello %s. A neved %d karakterből áll", name, length); 
+	printf("Hello %s. A neved %d karakterből áll.", name, length); 
 ```
+**Megjegyzés:** Ha az inputunk "hello world" volt, akkor az output a következő lesz: "Hello hello world. A neved 11 karakterből áll".
+A *strlen()* függvény visszatérési értéke az egy általunk megadott stringben szereplő karakterek száma, nem számítva a string végi null karaktert.
 
-----------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 *A string.h függvénykönyvtár tartalmaz számos string kezelő függvényt, melyek megkönnyítik a munkánkat ha stringekkel dolgozunk.
