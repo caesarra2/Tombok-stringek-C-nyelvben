@@ -73,6 +73,25 @@ char first = 'a'; // Valid
 char second = "a" // Error! Ebben az esetben az a betűt stringként kezeljük, ezért hozzáadódik a null karakter is automatikusan, tehát 2 karaktert próbálunk meg egy változóhoz rendelni.
 ```
 Tehát 'a' egy karakter, viszont "a" egy string mely az alábbi két karaktert tartalmazza: 'a', '\0'.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## Néhány egyszerű példa kód stringekkel, string kezelő függvényekkel.
+
+#### String kiírása *%s* printf paraméterrel.
+
+**A *%s* jelölés azt jelenti a *printf* függvénynél, hogy a kapott paramétert stringként kezelje, tehát addig írja ki a karaktereket amíg el nem ér a stringet lezáró null karakterig.**
+
+```C
+char str1[11] = { 'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd' }; // Nem String, mivel NEM null karakterrel végződik.
+char str2[12] = { 'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '\0' }; // String, mivel null karakterrel végződik.
+char str3[12] = "hello world"; // String, mivel ebben a deklarálási esetben automatikusan megkapta a végére a null karaktert.
+
+
+printf("%s", str1); // INVALID! Ami nem string azt ne próbáljuk meg %s paraméterrel kiiratni!
+printf("%s", str2); // VALID! Egy string, az output: "hello world".
+printf("%s", str3); // VALID! Szintén egy string, az output: "hello world".
+```
+
 
 A string.h függvénykönyvtár tartalmaz számos string kezelő függvényt, melyek megkönnyítik a munkánkat ha stringekkel dolgozunk.
 A függvények listája, valamint dokumentációja melyeket használhatunk ha includeoltuk a string.h-t megtalálható az alábbi linken: https://en.cppreference.com/w/c/string/byte
