@@ -41,7 +41,7 @@ free(arr);
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------
 # Stringek
-Amikor létrehozunk egy tömböt, akkor annak az elemei a memóriában egymás mellett foglalnak helyet; valamint tudjuk, hogy egy string az egy adott számú karakter, egymást követő bájtokban tárolva a memóriában. Ebből kikövetkeztethetjük, hogy egy char típusú tömb alkalmas string tárolására.
+Tudjuk azt, hogy amikor létrehozunk egy tömböt, akkor annak az elemei a memóriában egymás mellett foglalnak helyet; valamint tudjuk azt is, hogy egy string az egy adott számú karakter, egymást követő bájtokban tárolva a memóriában. Ebből kikövetkeztethetjük, hogy egy char típusú tömb alkalmas string tárolására.
 
 **Szabály:** C nyelvben minden string utolsó karaktere egy null karakter( '\0' ); Ez jelöli a string végét.
 
