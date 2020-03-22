@@ -1,4 +1,4 @@
-# Tömbök, stringek - Rövid ismétlés
+# Tömbök, stringek - C nyelvben
 
 ## Tömbök
 Egy tömb létrehozásakor az alábbi információkat kell biztosítanunk:
